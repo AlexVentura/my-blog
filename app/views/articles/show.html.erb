@@ -1,0 +1,32 @@
+<article class="bottom-space">
+    <%= article_cover @article.cover.url, class: 'background-cover' %>
+    <div class="row center-xs">
+        <div class="col-xs-12 ligth-border col-md-7">
+            <h1 class="be-big lmx-blue"><%= @article.title %></h1>
+            <p class="text-right be-small">
+                <%= link_to 'Atras', articles_path, class: 'underline' %> -
+                <span class="lmx-eliminar"><%= @article.visits_count %> visita(s)</span>
+                -
+                <% unless @article.user.nil? %>
+                    Escrito por: <%= @article.user.email %>
+                <% end %>
+            </p>
+            <p class="text-right be-small">
+                <!-- Aquí se deben mostrar las categorias -->
+                Etiquetas:
+                <% @article.categories.each do |category| %>
+                    <%= link_to category.name, category, style: "color: #{category.color}" %>
+                <% end %>
+            </p>
+
+            <div class="text-justify">
+                <%= Sanitize.fragment(@article.body, Sanitize::Config::RELAXED).html_safe %>
+            </div>
+
+            <div class="top-space">
+                <%= render 'articles/comments' %>
+            </div>
+
+        </div>
+    </div>
+</article>

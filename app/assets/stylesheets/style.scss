@@ -1,0 +1,115 @@
+/*
+* Globals
+* verde1 = 46babc
+* verde2 = 97c343
+*/
+html, body {
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+}
+nav li {
+    list-style: none;
+}
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+.btn {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    outline: none;
+    padding: 10px 12px;
+    text-transform: uppercase;
+}
+/* */
+#logo {
+    font-size: 1.2em;
+}
+.no-margin {
+    margin: 0px;
+}
+.article-height {
+    height: 150px;
+}
+.background-cover {
+    background-position: center;
+    background-size: cover !important;
+}
+.lmx-prime {
+    background-color: #46babc;
+}
+.lmx-error {
+    background-color: #97c343;
+    color: #fff;
+}
+.lmx-blue {
+    color: #66ccff;
+}
+.lmx-eliminar {
+    color: red !important;
+}
+.lmx-publicar {
+    color: blue !important;
+}
+.lmx-relative {
+    position: relative;
+}
+.lmx-absolute {
+    position: absolute;
+}
+.lmx-white {
+    color: #ecf0f1;
+}
+.lmx-gray {
+    color: #616161;
+    color: lightgray;
+}
+.lmx-gray2 {
+    color: #616161;
+}
+.lmx-comment {
+    text-decoration: none;
+    list-style: none;
+}
+.large-padding {
+    padding: 5px 2px;
+}
+/* Formulario */
+.field, .top-space, .actions {
+    margin-top: 1em;
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-justify {
+    text-align: justify;
+}
+.underline {
+    text-decoration: underline;
+}
+.be-small {
+    font-size: 12px;
+}
+.be-big {
+    font-size: 2em;
+}
+.ligth-border {
+
+}
+.form-control {
+    border: none;
+    border-bottom: 1px solid;
+    display: block;
+    font-size: 1.2em;
+    outline: none;
+    padding: 10px 0px;
+    width: 100%;
+}

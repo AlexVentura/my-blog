@@ -1,0 +1,20 @@
+<!-- <%= @artcicles.inspect %> -->
+
+<h1>Artículos</h1>
+<div class="container" style="margin: 0 auto;">
+    <div class="row">
+        <!-- Podemos hacer el render con un ciclo -->
+        <% @articles.each do |article| %>
+            <!-- Maquetado.. -->
+        <% end %>
+
+        <!-- Haciendolo con un parcial, el estilo que contenga es aplicado a cada elemento de la colección -->
+        <!-- El parcial debe llamarse como el recurso, en este caso espera un parcial llamado _article -->
+        <!-- ya que la colección es 'articles' el recurso es 'article' -->
+        <%= render @articles %>
+
+    </div>
+    <div class="top-space text-center">
+        <%= will_paginate @articles %>
+    </div>
+</div>

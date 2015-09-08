@@ -1,0 +1,14 @@
+<div class="container" style="margin: 0 auto;">
+    <p id="notice"><%= notice %></p>
+
+    <h1 style="color:<%= @category.color %>;"><%= @category.name %></h1>
+    <div class="row">
+        <!-- Haciendolo con un parcial, el estilo que contenga es aplicado a cada elemento de la colección -->
+        <!-- El parcial debe llamarse como el recurso, en este caso espera un parcial llamado _article -->
+        <!-- ya que la colección es 'articles' el recurso es 'article' -->
+        <%= render @category.articles %>
+
+    </div>
+    <%= link_to 'Edit', edit_category_path(@category) %> |
+    <%= link_to 'Back', categories_path %>
+</div>

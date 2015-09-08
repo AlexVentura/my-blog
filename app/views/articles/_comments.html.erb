@@ -1,0 +1,29 @@
+<div class="field">
+    <div class="row lmx-gray">
+        <div class="col-md-6 top-space">
+            <h3 class="text-left">Participa en los commentarios</h3>
+        </div>
+        <div class="col-md-6 top-space">
+            <!-- @article.comments.(length|count|size) -->
+            <h3 class="text-right"><%= @article.comments.count %> comentario(s)</h3>
+        </div>
+    </div>
+    <%= render 'comments/form' %>
+    <ul id="comments-box">
+        <% @article.comments.each do |comment| %>
+            <p class="text-right be-small">
+                Hace x días -
+                <span class="lmx-eliminar">
+                    Eliminar
+                    <!-- < link_to 'Eliminar', article, method: :delete, class: 'lmx-eliminar' %> -->
+                </span>
+            </p>
+            <li class="lmx-comment lmx-gray2">
+                <%= comment.body %> - <%= comment.user.email %>
+            </li>
+        <% end %>
+    </ul>
+</div>
+<div>
+    <%= link_to 'Editar', edit_article_path(@article) %>
+</div>

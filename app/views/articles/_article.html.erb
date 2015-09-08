@@ -1,0 +1,12 @@
+<div class="col-md-4 top-space">
+    <div class="box lmx-relative article-height">
+        <div class="lmx-absolute article-height background-cover" style="background:url(<%= article.cover.url(:thumb) %>); left:0px; top:0px; width:100%;"></div>
+        <div class="lmx-absolute article-height background-cover" style="background:rgba(0,0,0,0.5); left:0px; top:0px; width:100%;"></div>
+        <div class="lmx-relative lmx-white text-center">
+            <h2><%= link_to article.title, article %></h2>
+            <p>
+                <%= truncate(article.body, length: 30) %>
+            </p>
+        </div>
+    </div>
+</div>
